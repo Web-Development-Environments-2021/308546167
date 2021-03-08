@@ -4,14 +4,17 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
+<div class="menu">
+  <a href="#default" class="logo">Logo</a>
+  <div class="menu-right">
+    <a href="#about">About Me</a>
+    <a href="#photos">My Photos</a>
+    <a href="#playlist">My Playlist</a>
+    <a href="#like">Like</a>
+    <a href="#qrcoder">QR code</a>
+    <a href="#spa">Q&A</a>
+    <a href="#contact">Contact Me</a>
+  </div>
 </div>
 		  
 <section id="about" class="section">
@@ -24,60 +27,84 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
-<br/>
-<br/>
+<div class="category">
+  <b>about me</b>
+</div>
+<div class="aboutMe">
+  <p>מובטל חסר מעש וחסר נימוס. בן זוגה של אירנה ואחיו של ראובן</p>
+</div>
 </section>
 
 <section id="photos" class="section">
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
-<br/>
+<div class="category">
+  <b>my photos</b>
+</div>
+
+<div class="slideShowContainer">
+
+  <div class="mySlides fade">
+    <img src="https://th.bing.com/th/id/R29c81ec4aa1f444e4e223af04ca39824?rik=1xDt6E4lppMOew&riu=http%3a%2f%2fimg.mako.co.il%2f2011%2f01%2f14%2ferets8_04_12shauli_c.jpg&ehk=WZec5Za9Ehct8cBgimnzH8kj6OAPs3yMRwnFr9HtSVQ%3d&risl=&pid=ImgRaw" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://3.bp.blogspot.com/-wDUvBmdOPVo/WkyvoPCnRGI/AAAAAAAA7qM/nljj34FB1Q89xxo89qIAVhfe7fpvyCSHgCLcBGAs/s1600/%25D7%2590%25D7%2591%25D7%259C-%25D7%2596%25D7%2594-%25D7%259C%25D7%2590-%25D7%25A0%25D7%2595%25D7%25A9%25D7%2590-%25D7%25A9%25D7%2594%25D7%2599%25D7%2599%25D7%25AA%25D7%2599-%25D7%25A8%25D7%2595%25D7%25A6%25D7%2594-%25D7%259C%25D7%2594%25D7%25A8%25D7%2597%25D7%2599%25D7%2591-%25D7%25A2%25D7%259C%25D7%2599%25D7%2595.jpg" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://images1.calcalist.co.il/PicServer3/2019/04/07/897757/27030042_708134_l.jpg" style="width: 100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div>
+  <div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
 </section>
 
 <section id="playlist" class="section">
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
+<div class="category">
+  <b>my playlist</b>
+</div>
 <br/>
 <br/>
 <br/>
@@ -100,7 +127,9 @@ my playlist
 <br/>
 <br/>
 <br/>
-give me a like
+<div class="category">
+  <b>give me a like</b>
+</div>
 <br/>
 <br/>
 <br/>
@@ -123,7 +152,9 @@ give me a like
 <br/>
 <br/>
 <br/>
-scan my code
+<div class="category">
+  <b>scan my code</b>
+</div>
 <br/>
 <br/>
 <br/>
@@ -146,7 +177,9 @@ scan my code
 <br/>
 <br/>
 <br/>
-ans
+<div class="category">
+  <b>ans</b>
+</div>
 <br/>
 <br/>
 <br/>
@@ -169,7 +202,9 @@ ans
 <br/>
 <br/>
 <br/>
-contact me
+<div class="category">
+  <b>contact me</b>
+</div>
 <br/>
 <br/>
 <br/>
