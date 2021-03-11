@@ -60,3 +60,13 @@ color: white;
 	background-color: #474e5d;
 	color: white;
 }
+.fb-like-container {
+	max-width: 170px;
+	position: relative;
+	margin: auto;
+}
+.scan-code-container {
+	max-width: 330px;
+	position: relative;
+	margin: auto;
+}
