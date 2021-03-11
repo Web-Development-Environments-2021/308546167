@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="..\styles\style.css" />
 <link rel="stylesheet" type="text/css" href="..\styles\photos.css" />
+<link rel="stylesheet" type="text/css" href="..\styles\email-form.css" />
 
 </head>
 <body>
@@ -195,27 +196,37 @@
 <div class="category">
   <b>ans</b>
 </div>
+<br/>
 </section>
 
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <div class="category">
   <b>contact me</b>
+</div>
+<div class="contect-form-container">
+  <form action="mailto:ozlia@post.bgu.ac.il">
+    <lable for="fanme">First Name</lable>
+    <input type="text" id="fname" name="firstname" placeholder="youre first name please">
+
+    <lable for="lanme">Last Name</lable>
+    <input type="text" id="lname" name="lasttname" placeholder="youre last name please">
+
+    <lable for="email">Email</lable>
+    <input type="email" id="email" name="email" placeholder="please enter youre email here">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">isreal</option>
+      <option value="australia">iceland</option>
+      <option value="canada">france</option>
+      <option value="usa">brazil</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write here youre massage" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
 </div>
 <br/>
 <br/>
