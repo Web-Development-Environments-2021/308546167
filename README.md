@@ -1,2 +1,4 @@
 # assignment1-ozlia
-assignment1-ozlia created by GitHub Classroom
+ozlia@post.bgu.ac.il
+308546167
+https://web-development-environments-2021.github.io/assignment1-ozlia/
