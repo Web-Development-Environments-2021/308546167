@@ -1,8 +1,8 @@
 
 /* slideShow*/
 /* Slideshow container */
-.slideShowContainer {
-	max-width: 1000px;
+.videoShowContainer {
+	max-width: 570px;
 	position: relative;
 	margin: auto;
   }

@@ -3,13 +3,17 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
 <link rel="stylesheet" type="text/css" href="photos.css" />
+<link rel="stylesheet" type="text/css" href="videos.css" />
 <link rel="stylesheet" type="text/css" href="email-form.css" />
 <link rel="stylesheet" type="text/css" href="Q&A.css" />
+<link rel="stylesheet" type="text/css" href="emojionearea.min.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="emojionearea.min.js"></script>
 
 </head>
 <body>
 <div class="menu">
-  <a href="#default" class="logo">Logo</a>
+  <class="logo"><img src="TheParliament.png">
   <div class="menu-right">
     <a href="#about">About Me</a>
     <a href="#photos">My Photos</a>
@@ -110,7 +114,7 @@
   <b>My Playlist</b>
 </div>
 <br/>
-<div class="slideShowContainer">
+<div class="videoShowContainer">
 
   <div class="myVideoSlides fade">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sYgtBLIuxeI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -198,7 +202,7 @@
 <section id="spa" class="section">
 
 <div class="category">
-  <b>Ans</b>
+  <b>Q&A</b>
 </div>
 <button class="accordion">Q1</button>
 <div class="panel">
@@ -258,10 +262,18 @@
     </select>
 
     <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write here youre massage" style="height:200px"></textarea>
-
+    <textarea id="subject" name="subject" placeholder="Write here youre massage" style="height:200px"> </textarea>
+    <br>
     <input type="submit" value="Submit">
   </form>
+  
+ <script>
+  $(document).ready(function(){
+    $("#subject").emojioneArea({
+      pickerPostion: "bottom"
+    });
+  })
+</script>
 </div>
 <br/>
 <br/>
@@ -282,5 +294,7 @@ $(function(){
     $('#menu').toggle($(this).scrollTop()>1000)
  });​
  </script>
+
+
 </body>
 </html>
