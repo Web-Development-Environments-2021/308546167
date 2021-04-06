@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="styles\Q&A.css" />
 <link rel="stylesheet" type="text/css" href="styles\emojionearea.min.css" />
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="emojionearea.min.js"></script>
+<script src="js\emojionearea.min.js"></script>
 
 </head>
 <body>
@@ -81,35 +81,8 @@
     <span class="dot" onclick="currentSlide(3)"></span> 
   </div>
 </div>
+<script src="js\picSlide.js"></script>
 
-<script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-  </script>
 </section>
 
 <section id="playlist" class="section">
@@ -146,34 +119,7 @@
   </div>
 </div>
 
-<script>
-  var slideIndex = 1;
-  showVSlides(slideIndex);
-  
-  function plusVSlides(n) {
-    showVSlides(slideIndex += n);
-  }
-  
-  function currentVSlide(n) {
-    showVSlides(slideIndex = n);
-  }
-  
-  function showVSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("myVideoSlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-  </script>
+<script src="js\videoSlide.js"></script>
 
 </div>
 <br/>
@@ -227,26 +173,7 @@
   <p>בווב3 נוכל לבצע את החיפוש דרך עוזרת חכמה של או כל קוד/מכשיר אחר המסוגל לסרוק את הרשת ולתת את התוצאות המבוקשות, תוך הסתכלות על האתרים והבנת התוכן בהם גם ללא תיוג.דבר המגדיל את יכולות האחזור.</p>
 </div>
 
-<script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
-      this.classList.toggle("active");
-
-      /* Toggle between hiding and showing the active panel */
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-</script>
+<script src="js\accordion.js"></script>
 <br/>
 <br/>
 </section>
